@@ -1,7 +1,7 @@
 {
   "name": "image-gen",
   "version": "0.2.0",
-  "description": "Generate or edit images from Claude Code using Codex's built-in $imagegen skill.",
+  "description": "Generate and edit images in Claude Code with your ChatGPT plan, via the Codex CLI. No API key needed.",
   "author": {
     "name": "Milan Mijatovic",
     "url": "https://github.com/mijatovicmilan"

@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "image-gen",
-      "description": "Generate or edit images from Claude Code using Codex's built-in $imagegen skill.",
+      "description": "Generate and edit images in Claude Code with your ChatGPT plan, via the Codex CLI. No API key needed.",
       "source": "./",
       "category": "productivity"
     }
