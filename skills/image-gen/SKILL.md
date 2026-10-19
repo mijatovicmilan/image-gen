@@ -1,6 +1,6 @@
 ---
 name: image-gen
-description: Generate or edit images with Codex's built-in $imagegen skill. Use for /image-gen or when the user asks to generate or edit an image.
+description: Generate or edit images (illustrations, logos, icons, mockups, hero images, avatars, photos) with Codex's built-in $imagegen skill. Use for /image-gen or whenever the user wants an image created or changed. Not for charts, data diagrams or SVG.
 argument-hint: <what to draw>
 ---
 
