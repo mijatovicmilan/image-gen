@@ -1,21 +1,36 @@
-<div align="center">
-
 # image-gen
 
-**Generate and edit images without leaving Claude Code.**
-
-A tiny skill that hands your prompt to the [Codex CLI](https://github.com/openai/codex)'s
-built-in `$imagegen` and shows the result right in your chat.
+**Generate and edit images without leaving Claude Code.** A tiny skill that hands your
+prompt to the [Codex CLI](https://github.com/openai/codex)'s built-in `$imagegen` and
+shows the result right in your chat.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-</div>
+<img src="docs/images/desktop-generate.jpg" alt="Claude desktop app showing the /image-gen command and the generated floating-island coffee shop image inline in the chat" width="720">
+
+- **No API key needed.** It uses your existing Codex login, such as your ChatGPT plan.
+- **Edit by replying.** Say "make it nighttime" and Claude edits the last image.
+- **Images right in the chat** in the Claude desktop app, clickable file paths in the terminal.
+
+## Install
+
+You need the [Codex CLI](https://github.com/openai/codex) installed and logged in
+(`codex login`). Then run:
 
 ```bash
 npx skills add mijatovicmilan/image-gen -g -a claude-code
 ```
 
-Or paste this into Claude Code and let it install everything for you:
+Start a new Claude Code session and try it:
+
+```
+/image-gen a red apple on a white background
+```
+
+<details>
+<summary><b>Let Claude install it for you</b></summary>
+
+Paste this into Claude Code:
 
 ```
 Install the image-gen skill by running:
@@ -23,33 +38,12 @@ npx skills add mijatovicmilan/image-gen -g -a claude-code -y
 Then run `codex login status` and tell me if I still need to
 install or log in to the Codex CLI.
 ```
-
-Prefer a Claude Code plugin? [Install it from the marketplace instead](#getting-started).
-
-<div align="center">
-
-<img src="docs/images/desktop-generate.jpg" alt="Claude desktop app showing the /image-gen command and the generated floating-island coffee shop image inline in the chat" width="720">
-
-</div>
-
-- **No API key needed.** It uses your existing Codex login, such as your ChatGPT plan.
-- **Edit by replying.** Say "make it nighttime" and Claude edits the last image.
-- **Images right in the chat** in the Claude desktop app, clickable file paths in the terminal.
-
-## Getting started
-
-1. Install the [Codex CLI](https://github.com/openai/codex) and log in with `codex login`.
-2. Install the skill with the command at the top.
-3. Start a new Claude Code session and try it:
-
-   ```
-   /image-gen a red apple on a white background
-   ```
+</details>
 
 <details>
-<summary><b>Prefer a Claude Code plugin?</b></summary>
+<summary><b>Install as a Claude Code plugin instead</b></summary>
 
-Install it from this repo's plugin marketplace instead. Choose **one** method, not both.
+Choose **one** method, not both.
 
 ```bash
 claude plugin marketplace add mijatovicmilan/image-gen
@@ -90,22 +84,9 @@ Mention a file path and it's used as the image to edit or as a reference:
 ## Prompts to try
 
 ```
-/image-gen a cozy isometric coffee shop on a floating island, pastel
-```
-
-```
 /image-gen a minimalist app icon of a paper camera, orange and teal
-```
-
-```
 /image-gen a flat hero illustration about remote work, warm colors
-```
-
-```
 /image-gen redesign ./screenshot.png as a dark-mode UI
-```
-
-```
 /image-gen a wide blog header of a lighthouse at dawn, watercolor
 ```
 
@@ -137,14 +118,13 @@ No. It's an independent open-source skill.
 
 ## How it works
 
-```
-you ──▶ Claude Code ──▶ Codex ($imagegen) ──▶ image files ──▶ your chat
+```mermaid
+flowchart LR
+    A[Your prompt] --> B[Claude Code] --> C["Codex CLI ($imagegen)"] --> D[Image in your chat]
 ```
 
-1. Claude passes your request to Codex unchanged, adding `--image <path>` for any
-   images you want edited or used as a reference.
-2. Codex generates the image and replies with the file paths.
-3. Claude checks that each file exists and shows it in the chat.
+Claude passes your request to Codex unchanged. For edits, it attaches the image with
+`--image`, so Codex works from the original instead of starting over.
 
 The whole skill is one file: [`skills/image-gen/SKILL.md`](skills/image-gen/SKILL.md).
 Tested with Codex CLI 0.163.0.
