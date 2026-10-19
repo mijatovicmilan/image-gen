@@ -1,10 +1,9 @@
 # image-gen
 
-**Generate and edit images without leaving Claude Code.** A tiny skill that hands your
-prompt to the [Codex CLI](https://github.com/openai/codex)'s built-in `$imagegen` and
-shows the result right in your chat.
+**Generate and edit images without leaving Claude Code.**
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+A tiny skill that hands your prompt to the [Codex CLI](https://github.com/openai/codex)'s
+built-in `$imagegen` and shows the result right in your chat.
 
 <img src="docs/images/desktop-generate.jpg" alt="Claude desktop app showing the /image-gen command and the generated floating-island coffee shop image inline in the chat" width="720">
 
