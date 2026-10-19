@@ -46,7 +46,7 @@ Choose **one** method, not both.
 
 ```bash
 claude plugin marketplace add mijatovicmilan/image-gen
-claude plugin install image-gen@image-gen
+claude plugin install image-gen@mijatovicmilan
 ```
 
 As a plugin, the command is `/image-gen:image-gen`.
@@ -158,8 +158,8 @@ codex exec --skip-git-repo-check '$imagegen a red apple'
 
 | | Plain skill | Plugin |
 |---|---|---|
-| **Update** | `npx skills update image-gen -g` | `claude plugin update image-gen@image-gen` |
-| **Uninstall** | `npx skills remove image-gen -g` | `claude plugin uninstall image-gen@image-gen` |
+| **Update** | `npx skills update image-gen -g` | `claude plugin update image-gen@mijatovicmilan` |
+| **Uninstall** | `npx skills remove image-gen -g` | `claude plugin uninstall image-gen@mijatovicmilan` |
 
 ## Contributing
 
