@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "image-gen",
+  "description": "Generate or edit images from Claude Code using Codex's built-in $imagegen skill.",
+  "owner": {
+    "name": "Milan Mijatovic",
+    "url": "https://github.com/mijatovicmilan"
+  },
+  "plugins": [
+    {
+      "name": "image-gen",
+      "description": "Generate or edit images from Claude Code using Codex's built-in $imagegen skill.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

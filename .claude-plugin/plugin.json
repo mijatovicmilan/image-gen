@@ -1,0 +1,13 @@
+{
+  "name": "image-gen",
+  "version": "0.1.0",
+  "description": "Generate or edit images from Claude Code using Codex's built-in $imagegen skill.",
+  "author": {
+    "name": "Milan Mijatovic",
+    "url": "https://github.com/mijatovicmilan"
+  },
+  "homepage": "https://github.com/mijatovicmilan/image-gen",
+  "repository": "https://github.com/mijatovicmilan/image-gen",
+  "license": "MIT",
+  "keywords": ["image", "image-generation", "codex", "imagegen"]
+}
