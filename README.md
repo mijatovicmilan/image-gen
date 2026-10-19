@@ -1,5 +1,7 @@
 # image-gen
 
+[![skills.sh](https://skills.sh/b/mijatovicmilan/image-gen)](https://skills.sh/mijatovicmilan/image-gen)
+
 **Generate and edit images without leaving Claude Code.**
 
 A tiny skill that hands your prompt to the [Codex CLI](https://github.com/openai/codex)'s
