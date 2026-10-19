@@ -23,7 +23,7 @@ npx skills add mijatovicmilan/image-gen -g -a claude-code
 Start a new Claude Code session and try it:
 
 ```
-/image-gen a red apple on a white background
+/image-gen a cozy isometric coffee shop on a floating island in the sky
 ```
 
 <details>
@@ -79,15 +79,6 @@ Mention a file path and it's used as the image to edit or as a reference:
 > [!TIP]
 > You don't have to type the command at all. Asking Claude to *"generate an image of…"*
 > or *"edit this image so…"* triggers the skill too.
-
-## Prompts to try
-
-```
-/image-gen a minimalist app icon of a paper camera, orange and teal
-/image-gen a flat hero illustration about remote work, warm colors
-/image-gen redesign ./screenshot.png as a dark-mode UI
-/image-gen a wide blog header of a lighthouse at dawn, watercolor
-```
 
 ## Where images are saved
 
