@@ -139,10 +139,17 @@ The Codex CLI isn't installed or isn't on your `PATH`. Install it from
 </details>
 
 <details>
-<summary><b>"Not logged in" or no image comes back</b></summary>
+<summary><b>"Codex failed" with "401 Unauthorized"</b></summary>
 
-Check your login with `codex login status`, and run `codex login` if needed. To see the
-real error, run Codex by hand:
+Codex isn't logged in. Run `codex login`, then try again. You can check with
+`codex login status`.
+</details>
+
+<details>
+<summary><b>"Codex failed" with another error, or no image comes back</b></summary>
+
+Claude shows the last lines of Codex's error log. For the full picture, run Codex by
+hand:
 
 ```bash
 codex exec --skip-git-repo-check '$imagegen a red apple'
